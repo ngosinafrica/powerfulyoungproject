@@ -1,0 +1,22 @@
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <a href="/" class="logo-text"><img class="img-w-50" src="{{@blog.logo}}" alt="{{meta_title}}"> PYP</a>
+            </div>
+            <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
+                <div class="navigation">
+                    <div id="navigation">
+                        <ul>
+                            {{#foreach navigation}}
+                                <li>
+                                    <a class="{{#if current}} active{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
+                                </li>
+                            {{/foreach}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+{{!< default}}
+{{#post}}
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h2 class="section-heading">{{title}}</h2>
+                    <hr class="primary">
+                    <p>
+                       By {{author.name}} {{#if twitter}}<i class="fa fa-twitter"></i> <small>{{twitter}}</small>{{/if}}
+                        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+                    </p>
+                    <br><br>
+                    <p class="text-justify">{{content}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{{/post}}

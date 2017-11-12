@@ -1,0 +1,17 @@
+<section class="no-padding">
+    <div class="equal-heights w-middle">
+        {{#foreach posts}}
+            <div class="col-md-4 bg-primary">
+                <div class="box">
+                    <h2>{{title}}</h2>
+                    <p>
+                        {{excerpt words="10"}}
+                    </p>
+                    <a href="{{url}}" class="btn btn-round btn-white btn-xl">READ MORE</a>
+                </div>
+            </div>
+        {{/foreach}}
+    </div>
+</section>
+<div class="clearfix">
+</div>

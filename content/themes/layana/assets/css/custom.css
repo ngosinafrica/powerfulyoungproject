@@ -1,0 +1,14 @@
+@media only screen and (max-width: 768px){
+
+    #projects {
+        margin-bottom: inherit;
+    }
+    .parent-container{
+        margin-top: 30px;
+    }
+}
+
+#projects{
+    margin-bottom: 300px;
+}
+

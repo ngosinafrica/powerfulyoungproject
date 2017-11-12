@@ -1,0 +1,39 @@
+{{!< default}}
+<section id="projects" class="parent-container">
+    {{#tag}}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">OUR <b>{{name}}</b></h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+    {{/tag}}
+    <div class="equal-heights w-middle">
+        {{#foreach posts}}
+            {{#if_even @index}}
+                <div class="col-md-4 bg-primary">
+                    <div class="box">
+                        <h2>{{title}}</h2>
+                        <p>
+                            {{excerpt words="10"}}
+                        </p>
+                        <a href="{{url}}" class="btn btn-round btn-white btn-xl">READ MORE</a>
+                    </div>
+                </div>
+                {{else}}
+                <div class="col-md-4 bg-gray">
+                    <div class="box">
+                        <h2>{{title}}</h2>
+                        <p>
+                            {{excerpt words="10"}}
+                        </p>
+                        <a href="{{url}}" class="btn btn-round btn-white btn-xl">READ MORE</a>
+                    </div>
+                </div>
+            {{/if_even}}
+
+        {{/foreach}}
+    </div>
+</section>

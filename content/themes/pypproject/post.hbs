@@ -1,0 +1,96 @@
+{{!< default}}
+{{#post}}
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="page-caption">
+                        <h2 class="page-title">{{title}}</h2>
+                        <div class="page-breadcrumb">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="post-holder">
+                                <!-- post holder -->
+                                <div class="post-img"><img src="img/post-img-large-1.jpg"
+                                                           alt="" class="img-responsive">
+                                </div>
+                                <div class="post-content">
+                                    <!-- post content -->
+                                    <div class="post-header">
+                                        <h1>{{title}}</h1>
+                                        <div class="meta">
+                                            <!-- post meta -->
+                                            <time class="meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date
+                                                    format="DD MMMM YYYY"}}</time>
+                                            <span class="meta-user">By {{author.name}} {{#if twitter}}
+                                                <i class="fa fa-twitter"></i> <small>{{twitter}}</small>{{/if}}</span>
+                                        </div>
+                                        <p class="text-justify">{{content}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <!--<div class="widget widget-search">
+                        &lt;!&ndash; widget search &ndash;&gt;
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search Here"
+                                       aria-describedby="basic-addon2">
+                                <span class="input-group-addon" id="basic-addon2">
+                                <i class="fa fa-search"></i></span>
+                            </div>
+                            &lt;!&ndash; /input-group &ndash;&gt;
+                        </form>
+                    </div>-->
+                    <!-- /.widget search -->
+                    <!-- widget start -->
+                    <div class="widget widget-recent-post">
+                        <!-- widget recent post -->
+                        <h3 class="widget-title"> Recent Post </h3>
+                        <ul class="listnone widget-recent-post">
+                            <li>
+                                {{#get "posts" limit="5" as |recents|}}
+                                    {{#foreach recents}}
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                <div class="recent-post-img">
+                                                    <a href="{{url}}"><img class="img-w-50" src="{{image}}" alt=""></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                <div class="recent-post-content">
+                                                    <h4 class="recent-title"><a href="{{url}}"
+                                                                                class="title">{{title}}</a></h4>
+                                                    <div class="meta">
+                                                        <time class="meta-date"
+                                                              datetime="{{date format="YYYY-MM-DD"}}">{{date
+                                                                format="DD MMMM YYYY"}}</time>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {{/foreach}}
+                                {{/get}}
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.widget recent post -->
+                </div>
+            </div>
+        </div>
+    </div>
+{{/post}}
+{{> get_involved}}
