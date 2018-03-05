@@ -1,3 +1,4 @@
 # Content / Apps
 
-Coming soon, Ghost apps will appear here.
+Coming soon, Ghost apps will appear here. 
+
